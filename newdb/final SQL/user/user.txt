@@ -1,0 +1,13 @@
+CREATE TABLE  `newnova`.`user` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+		`username` VARCHAR( 255 ) NOT NULL ,
+		`password` VARCHAR( 255 ) NOT NULL ,
+		`randomsalt` VARCHAR( 255 ) NOT NULL ,
+		`authorisationID` INT NOT NULL ,
+		`primary_email` VARCHAR( 255 ) NOT NULL ,
+		`secondary_email` VARCHAR( 255 ) NULL ,
+		`registration_time` INT NOT NULL ,
+		`last_online` INT NOT NULL ,
+		`is_banned` BOOL NOT NULL ,
+		`banned_until` INT NOT NULL
+	) ENGINE = MYISAM ;

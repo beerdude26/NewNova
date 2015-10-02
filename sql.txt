@@ -1,0 +1,9 @@
+CREATE TABLE  `newnova`.`planet` (
+`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`userID` INT NOT NULL ,
+`galaxy` INT NOT NULL ,
+`system` INT NOT NULL ,
+`planet` INT NOT NULL ,
+`metal` INT NOT NULL ,
+`crystal` INT NOT NULL ,
+`deuterium` INT NOT NULL

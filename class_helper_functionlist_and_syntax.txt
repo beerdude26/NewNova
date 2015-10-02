@@ -1,0 +1,2 @@
+Helper::clamp( $min_value, $max_value, $value_to_compare )	* Clamper Function *
+Helper::var_dump_pre( $mixed )	* var_dump within pre tags *

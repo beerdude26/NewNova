@@ -1,0 +1,23 @@
+CREATE TABLE  `newnova`.`colony_resources` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`metal_available` BIGINT UNSIGNED NOT NULL ,
+		`metal_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`metal_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`crystal_available` BIGINT UNSIGNED NOT NULL ,
+		`crystal_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`crystal_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_available` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`energy_available` BIGINT NOT NULL ,
+		`energy_limit` BIGINT NOT NULL ,
+		`metal_mine_power_level` INT NOT NULL ,
+		`crystal_mine_power_level` INT NOT NULL ,
+		`deuterium_synthesizer_power_level` INT NOT NULL ,
+		`solar_plant_power_level` INT NOT NULL ,
+		`fusion_plant_power_level` INT NOT NULL ,
+		`solar_satellite_power_level` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;

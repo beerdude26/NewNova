@@ -1,0 +1,21 @@
+CREATE TABLE  `newnova`.`colony_properties` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`current_building_scheduled_at` BIGINT UNSIGNED NOT NULL ,
+		`points` INT NOT NULL , -- TODO: Understand what this exactly does
+		`max_build_fields` INT NOT NULL ,
+		`used_build_fields` INT NOT NULL ,
+		`minimal_temperature` INT NOT NULL ,
+		`maximal_temperature` INT NOT NULL ,
+		`type` INT NOT NULL ,
+		`image` INT NOT NULL ,
+		`diameter` INT NOT NULL ,
+		`is_destroyed` BOOL NOT NULL ,
+		`class` INT NOT NULL,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;
+	
+	-- TODO: Perhaps we should normalize type (stands for groundtype)?
+	ALTER TABLE  `colony_properties` CHANGE  `type`  `type` VARCHAR( 255 ) NOT NULL ,
+CHANGE  `image`  `image` VARCHAR( 255 ) NOT NULL

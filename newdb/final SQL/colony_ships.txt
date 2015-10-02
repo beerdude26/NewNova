@@ -1,0 +1,25 @@
+CREATE TABLE  `newnova`.`fleet` (
+		`fleetID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+		`colonyID` INT NOT NULL ,
+		`mission_type` INT NOT NULL ,
+		`metal_in_cargo` INT NOT NULL ,
+		`crystal_in_cargo` INT NOT NULL ,
+		`deuterium_in_cargo` INT NOT NULL ,
+		`small_cargo_ship` INT NOT NULL ,
+		`large_cargo_ship` INT NOT NULL ,
+		`light_fighter` INT NOT NULL ,
+		`heavy_fighter` INT NOT NULL ,
+		`cruiser` INT NOT NULL ,
+		`battleship` INT NOT NULL ,
+		`colony_ship` INT NOT NULL ,
+		`recycler` INT NOT NULL ,
+		`espionage_probe` INT NOT NULL ,
+		`bomber` INT NOT NULL ,
+		`solar_satellite` INT NOT NULL ,
+		`destroyer` INT NOT NULL ,
+		`death_star` INT NOT NULL ,
+		`battlecruiser` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;

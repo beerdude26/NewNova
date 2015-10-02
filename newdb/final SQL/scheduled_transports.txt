@@ -1,0 +1,6 @@
+CREATE TABLE  `newnova`.`scheduled_transports` (
+`transportID` INT NOT NULL PRIMARY KEY ,
+`fleetID` INT NOT NULL ,
+`colonyID` INT NOT NULL ,
+`scheduled_time` BIGINT NOT NULL
+) ENGINE = MYISAM ;

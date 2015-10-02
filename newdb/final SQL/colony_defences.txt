@@ -1,0 +1,14 @@
+CREATE TABLE  `newnova`.`colony_defences` (
+		`colonyID` INT NOT NULL ,
+		`rocket_launcher` INT NOT NULL ,
+		`light_laser` INT NOT NULL ,
+		`heavy_laser` INT NOT NULL ,
+		`gauss_cannon` INT NOT NULL ,
+		`ion_cannon` INT NOT NULL ,
+		`plasma_turret` INT NOT NULL ,
+		`small_shield_dome` INT NOT NULL ,
+		`large_shield_dome` INT NOT NULL ,
+		`anti_ballistic_missiles` INT NOT NULL ,
+		`interplanetary_missiles` INT NOT NULL ,
+		PRIMARY KEY (  `colonyID` )
+	) ENGINE = MYISAM ;

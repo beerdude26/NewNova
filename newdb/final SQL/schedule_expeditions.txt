@@ -1,0 +1,8 @@
+CREATE TABLE  `newnova`.`scheduled_expeditions` (
+`expeditionID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`fleetID` INT NOT NULL ,
+`galaxy_position` INT NOT NULL ,
+`system_position` INT NOT NULL ,
+`planet_position` INT NOT NULL ,
+`scheduled_time` BIGINT NOT NULL
+) ENGINE = MYISAM ;

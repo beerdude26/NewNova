@@ -1,0 +1,10 @@
+NewNova
+
+- PHP classes
+- Inheritance
+- Non-shitty DB scheme
+- Regression tests
+
+- Use HTML Purifier for input
+
+- Use CKEditor as WYSIWYG

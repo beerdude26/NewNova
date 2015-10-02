@@ -1,0 +1,6 @@
+CREATE TABLE  `newnova`.`scheduled_battles` (
+`battleID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`attackerID` INT NOT NULL ,
+`defenderID` INT NOT NULL ,
+`scheduled_time` BIGINT NOT NULL
+) ENGINE = MYISAM ;

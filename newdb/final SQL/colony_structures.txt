@@ -1,0 +1,24 @@
+CREATE TABLE  `newnova`.`colony_structures` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`metal_mine` INT NOT NULL ,
+		`crystal_mine` INT NOT NULL ,
+		`deuterium_synthesizer` INT NOT NULL ,
+		`solar_plant` INT NOT NULL ,
+		`fusion_plant` INT NOT NULL ,
+		`robotics_factory` INT NOT NULL ,
+		`nano_factory` INT NOT NULL ,
+		`shipyard` INT NOT NULL ,
+		`metal_storage` INT NOT NULL ,
+		`crystal_storage` INT NOT NULL ,
+		`deuterium_storage` INT NOT NULL ,
+		`research_lab` INT NOT NULL ,
+		`terraformer` INT NOT NULL ,
+		`alliance_depot` INT NOT NULL ,
+		`missile_silo` INT NOT NULL ,
+		`lunar_base` INT NOT NULL ,
+		`sensor_phalanx` INT NOT NULL ,
+		`jump_gate` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;

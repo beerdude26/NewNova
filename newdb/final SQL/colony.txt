@@ -1,0 +1,12 @@
+CREATE TABLE  `newnova`.`colony` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+		`name` VARCHAR( 255 ) NULL ,
+		`userID` INT NOT NULL ,
+		`is_moon` BOOL NOT NULL DEFAULT  '0',
+		`galaxy_position` INT NOT NULL ,
+		`system_position` INT NOT NULL ,
+		`planet_position` INT NOT NULL ,
+		`last_updated` INT NOT NULL
+	) ENGINE = MYISAM ;
+	
+	ALTER TABLE  `colony` ADD  `is_home_colony` BOOL NOT NULL AFTER  `userID`

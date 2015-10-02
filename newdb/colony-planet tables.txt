@@ -1,0 +1,141 @@
+	Veld	Type	Collatie	Attributen	Null	Standaardwaarde	Extra	Actie
+	
+	PLANET TABLE
+	CREATE TABLE  `newnova`.`colony` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+		`name` VARCHAR( 255 ) NULL ,
+		`userID` INT NOT NULL ,
+		`is_moon` BOOL NOT NULL DEFAULT  '0',
+		`galaxy_position` INT NOT NULL ,
+		`system_position` INT NOT NULL ,
+		`planet_position` INT NOT NULL ,
+		`last_updated` INT NOT NULL
+	) ENGINE = MYISAM ;
+	
+	ALTER TABLE  `colony` ADD  `is_home_colony` BOOL NOT NULL AFTER  `userID`
+
+	PLANET PROPERTIES 	 	
+	CREATE TABLE  `newnova`.`colony_properties` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`points` INT NOT NULL , -- TODO: Understand what this exactly does
+		`max_build_fields` INT NOT NULL ,
+		`used_build_fields` INT NOT NULL ,
+		`minimal_temperature` INT NOT NULL ,
+		`maximal_temperature` INT NOT NULL ,
+		`type` INT NOT NULL ,
+		`image` INT NOT NULL ,
+		`diameter` INT NOT NULL ,
+		`is_destroyed` BOOL NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;
+	
+	-- TODO: Perhaps we should normalize type (stands for groundtype)?
+	ALTER TABLE  `colony_properties` CHANGE  `type`  `type` VARCHAR( 255 ) NOT NULL ,
+CHANGE  `image`  `image` VARCHAR( 255 ) NOT NULL
+	 	 
+
+	-- TODO: We need to make a Production table that keeps these queues in a normalized manner instead of giant arrays of text
+		 
+	PLANET PRODUCTION 	 	 	 	 	
+	b_building_id	text	latin1_swedish_ci		Nee -- TODO: Build an actual table for this			 	 	 				 	 	 	 	 	 	 	
+	b_tech_id	int(11)			Nee	0		 	 	 -- TODO: Build an actual table for this			 	 	 		 	 	 	 	 	 	
+	b_hangar_id	text	latin1_swedish_ci		Nee		-- TODO: Build an actual table for this			 	 	 				 
+	last_jump_gate_usage	int(11)			Nee	0
+	
+	
+	
+	PLANET RESOURCES
+	CREATE TABLE  `newnova`.`colony_resources` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`metal_available` BIGINT UNSIGNED NOT NULL ,
+		`metal_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`metal_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`crystal_available` BIGINT UNSIGNED NOT NULL ,
+		`crystal_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`crystal_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_available` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_produced_hourly` BIGINT UNSIGNED NOT NULL ,
+		`deuterium_storage_limit` BIGINT UNSIGNED NOT NULL ,
+		`energy_available` BIGINT NOT NULL ,
+		`energy_limit` BIGINT NOT NULL ,
+		`metal_mine_power_level` INT NOT NULL ,
+		`crystal_mine_power_level` INT NOT NULL ,
+		`deuterium_synthesizer_power_level` INT NOT NULL ,
+		`solar_planet_power_level` INT NOT NULL ,
+		`fusion_plant_power_level` INT NOT NULL ,
+		`solar_satellite_power_level` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;
+
+	
+	PLANET STRUCTURES
+	CREATE TABLE  `newnova`.`colony_structures` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`metal_mine` INT NOT NULL ,
+		`crystal_mine` INT NOT NULL ,
+		`deuterium_synthesizer` INT NOT NULL ,
+		`solar_plant` INT NOT NULL ,
+		`fusion_plant` INT NOT NULL ,
+		`robotics_factory` INT NOT NULL ,
+		`nano_factory` INT NOT NULL ,
+		`shipyard` INT NOT NULL ,
+		`metal_storage` INT NOT NULL ,
+		`crystal_storage` INT NOT NULL ,
+		`deuterium_storage` INT NOT NULL ,
+		`research_lab` INT NOT NULL ,
+		`terraformer` INT NOT NULL ,
+		`alliance_depot` INT NOT NULL ,
+		`missile_silo` INT NOT NULL ,
+		`lunar_base` INT NOT NULL ,
+		`sensor_phalanx` INT NOT NULL ,
+		`jump_gate` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;
+
+	PLANET SHIPS
+	CREATE TABLE  `newnova`.`colony_ships` (
+		`colonyID` INT NOT NULL PRIMARY KEY ,
+		`small_cargo` INT NOT NULL ,
+		`large_cargo` INT NOT NULL ,
+		`light_fighter` INT NOT NULL ,
+		`heavy_fighter` INT NOT NULL ,
+		`cruiser` INT NOT NULL ,
+		`battleship` INT NOT NULL ,
+		`colony_ship` INT NOT NULL ,
+		`recycler` INT NOT NULL ,
+		`espionage_probe` INT NOT NULL ,
+		`bomber` INT NOT NULL ,
+		`solar_satellite` INT NOT NULL ,
+		`destroyer` INT NOT NULL ,
+		`death_star` INT NOT NULL ,
+		`battlecruiser` INT NOT NULL ,
+		UNIQUE (
+		`colonyID`
+		)
+	) ENGINE = MYISAM ;
+
+	PLANET DEFENCES
+	CREATE TABLE  `newnova`.`colony_defences` (
+		`colonyID` INT NOT NULL ,
+		`rocket_launcher` INT NOT NULL ,
+		`light_laser` INT NOT NULL ,
+		`heavy_laser` INT NOT NULL ,
+		`gauss_cannon` INT NOT NULL ,
+		`ion_cannon` INT NOT NULL ,
+		`plasma_turret` INT NOT NULL ,
+		`small_shield_dome` INT NOT NULL ,
+		`large_shield_dome` INT NOT NULL ,
+		`anti_ballistic_missiles` INT NOT NULL ,
+		`interplanetary_missiles` INT NOT NULL ,
+		PRIMARY KEY (  `colonyID` )
+	) ENGINE = MYISAM ;
+	 	 	 	 	 	 		 	 	 	 	 	 	
+	 	 	 	 	 	 	
+			 	 	 	 	 	 	
+			 	 	 	 	 	 	

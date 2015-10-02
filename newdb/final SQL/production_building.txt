@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `production_building` (
+  `colonyID` int(11) NOT NULL,
+  `resource_type_being_built` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
+  `build_list_position` int(11) NOT NULL
+  INDEX (  `colonyID` )
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

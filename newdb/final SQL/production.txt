@@ -1,0 +1,10 @@
+CREATE TABLE  `newnova`.`production` (
+`colonyID` INT NOT NULL ,
+`resource_type_being_built` INT NOT NULL ,
+`amount_requested` INT NOT NULL ,
+`build_list_position` INT NOT NULL ,
+-- This is used to disambiguate between items of the same type in the same list
+-- for example: [Light Fighter, Cruiser, Light Fighter] will have production numbers [0, 0, 1] respectively
+`scheduled_time` BIGINT NOT NULL ,
+INDEX (  `colonyID` )
+) ENGINE = MYISAM ;

@@ -1,0 +1,20 @@
+CREATE TABLE  `newnova`.`user_technology` (
+		`userID` INT NOT NULL ,
+		`espionage_technology` INT NOT NULL ,
+		`computer_technology` INT NOT NULL ,
+		`weapons_technology` INT NOT NULL ,
+		`shielding_technology` INT NOT NULL ,
+		`armor_technology` INT NOT NULL ,
+		`energy_technology` INT NOT NULL ,
+		`hyperspace_technology` INT NOT NULL ,
+		`combustion_drive` INT NOT NULL ,
+		`impulse_drive` INT NOT NULL ,
+		`hyperspace_drive` INT NOT NULL ,
+		`laser_technology` INT NOT NULL ,
+		`ion_technology` INT NOT NULL ,
+		`plasma_technology` INT NOT NULL ,
+		`intergalactic_research_network_technology` INT NOT NULL ,
+		`expedition_technology` INT NOT NULL ,
+		`graviton_technology` INT NOT NULL ,
+		PRIMARY KEY (  `userID` )
+	) ENGINE = MYISAM ;

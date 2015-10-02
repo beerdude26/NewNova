@@ -1,0 +1,12 @@
+CREATE TABLE  `newnova`.`user_settings` (
+		`userID` INT NOT NULL ,
+		`language` INT NOT NULL ,
+		`tooltip_hover_time` INT NOT NULL ,
+		`galaxy_view_shortcut_espionage` BOOL NOT NULL ,
+		`galaxy_view_shortcut_message` BOOL NOT NULL ,
+		`galaxy_view_shortcut_add_buddy` BOOL NOT NULL ,
+		`galaxy_view_shortcut_missile_attack` BOOL NOT NULL ,
+		`on_vacation` BOOL NOT NULL ,
+		`on_vacation_until` INT NOT NULL ,
+		PRIMARY KEY (  `userID` )
+	) ENGINE = MYISAM ;
